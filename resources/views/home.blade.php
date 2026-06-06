@@ -49,8 +49,8 @@
     <div class="hero">
         <h1>Dikumur Dikunyah <span>Assalamualaikum Semuanya!!!</span> 👋</h1>
         <p>Ini adalah halaman Home kelompok kami. Kami adalah mahasiswa Sistem Informasi Universitas Al-Ghifari Bandung.</p>
-        <a href="about.html" class="btn-main">Kenali Kami</a>
-        <a href="contact.html" class="btn-outline">Hubungi Kami</a>
+        <a href="about" class="btn-main">Kenali Kami</a>
+        <a href="contact" class="btn-outline">Hubungi Kami</a>
     </div>
     <div class="features">
         <div class="container">
