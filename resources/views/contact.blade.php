@@ -6,32 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kelompok 1 – Contact</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body { font-family: 'Segoe UI', sans-serif; background: #f8f9ff; color: #222; display: flex; flex-direction: column; min-height: 100vh; }
-        .navbar { background: #fff; border-bottom: 2px solid #e0e7ff; }
-        .navbar-brand { font-weight: 800; color: #4f46e5 !important; }
-        .nav-link { color: #555 !important; font-weight: 600; }
-        .nav-link:hover, .nav-link.active { color: #4f46e5 !important; }
-        .page-header { background: linear-gradient(135deg, #eef2ff, #fce7f3); padding: 60px 20px; text-align: center; }
-        .page-header h1 { font-size: 2rem; font-weight: 800; color: #1e1b4b; }
-        .page-header h1 span { color: #4f46e5; }
-        .page-header p { color: #666; max-width: 480px; margin: 12px auto 0; }
-        .content-wrap { flex: 1; padding: 50px 20px; }
-        .form-card { background: #fff; border-radius: 12px; padding: 32px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
-        .form-card h5 { font-weight: 800; color: #1e1b4b; margin-bottom: 24px; }
-        label { font-weight: 700; font-size: 0.85rem; color: #555; margin-bottom: 6px; }
-        .form-control { border-radius: 8px; border: 1.5px solid #e0e7ff; font-size: 0.95rem; padding: 10px 14px; }
-        .form-control:focus { border-color: #4f46e5; box-shadow: 0 0 0 3px rgba(79,70,229,0.1); }
-        .btn-send { background: #4f46e5; color: white; border: none; padding: 12px; border-radius: 8px; font-weight: 700; font-size: 1rem; width: 100%; cursor: pointer; }
-        .btn-send:hover { background: #4338ca; }
-        .info-card { background: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
-        .info-icon { font-size: 1.5rem; flex-shrink: 0; }
-        .info-card h6 { font-size: 0.78rem; color: #999; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 2px; font-weight: 700; }
-        .info-card p { font-size: 0.92rem; font-weight: 600; color: #333; margin: 0; }
-        .success-msg { display: none; background: #dcfce7; color: #15803d; border-radius: 8px; padding: 12px 16px; font-weight: 700; margin-top: 14px; font-size: 0.9rem; }
-        footer { background: #1e1b4b; color: rgba(255,255,255,0.6); text-align: center; padding: 20px; font-size: 0.88rem; }
-        footer span { color: #a5b4fc; font-weight: 700; }
-    </style>
+    
+    @vite(['resources/css/2.css'])
 </head>
 <body>
 <nav class="navbar navbar-expand-lg">
