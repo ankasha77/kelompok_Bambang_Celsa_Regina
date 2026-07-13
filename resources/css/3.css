@@ -1,0 +1,22 @@
+body { font-family: 'Segoe UI', sans-serif; background: #f8f9ff; color: #222; display: flex; flex-direction: column; min-height: 100vh; }
+        .navbar { background: #fff; border-bottom: 2px solid #e0e7ff; }
+        .navbar-brand { font-weight: 800; color: #4f46e5 !important; }
+        .nav-link { color: #555 !important; font-weight: 600; }
+        .nav-link:hover, .nav-link.active { color: #4f46e5 !important; }
+        .page-header { background: linear-gradient(135deg, #eef2ff, #fce7f3); padding: 60px 20px; text-align: center; }
+        .page-header h1 { font-size: 2rem; font-weight: 800; color: #1e1b4b; }
+        .page-header h1 span { color: #4f46e5; }
+        .page-header p { color: #666; max-width: 480px; margin: 12px auto 0; }
+        .content-wrap { flex: 1; padding: 50px 20px; }
+        .section-title { font-weight: 800; font-size: 1.4rem; margin-bottom: 20px; color: #1e1b4b; }
+        .vm-card { background: #fff; border-radius: 12px; padding: 28px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); height: 100%; }
+        .vm-card h5 { font-weight: 800; color: #4f46e5; margin-bottom: 12px; }
+        .vm-card p, .vm-card li { color: #666; font-size: 0.92rem; line-height: 1.8; }
+        .vm-card ul { padding-left: 18px; }
+        .member-card { background: #fff; border-radius: 12px; padding: 24px 16px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); text-align: center; height: 100%; }
+        .avatar { width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin: 0 auto 12px; }
+        .member-card h6 { font-weight: 800; font-size: 0.9rem; margin-bottom: 4px; }
+        .nim { font-size: 0.78rem; color: #999; margin-bottom: 8px; }
+        .role-badge { display: inline-block; font-size: 0.75rem; font-weight: 700; padding: 3px 12px; border-radius: 50px; background: #eef2ff; color: #4f46e5; }
+        footer { background: #1e1b4b; color: rgba(255,255,255,0.6); text-align: center; padding: 20px; font-size: 0.88rem; }
+        footer span { color: #a5b4fc; font-weight: 700; }
