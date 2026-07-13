@@ -1,53 +1,65 @@
-<div>
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kelompok 1 – Contact</title>
+    <title>Kelompok 5 – Contact</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
     @vite(['resources/css/2.css'])
 </head>
 <body>
 <nav class="navbar navbar-expand-lg">
     <div class="container">
-        <a class="navbar-brand" href="home.html">✦ MyWebsite</a>
-        <div class="collapse navbar-collapse">
+        <a class="navbar-brand" href="{{ route('home') }}">✦ MyWebsite</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('home') }}">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('about') }}">About</a></li>
+                <li class="nav-item"><a class="nav-link active" href="{{ route('contact.index') }}">Contact</a></li>
+                <li class="nav-item me-3"><a class="nav-link" href="{{ route('layanan') }}">Layanan</a></li>
             </ul>
         </div>
     </div>
 </nav>
+
 <div class="page-header">
     <h1>Hubungi <span>Kami</span> 📬</h1>
     <p>Ada pertanyaan atau ingin berkolaborasi? Jangan ragu untuk menghubungi kami!</p>
 </div>
+
 <div class="content-wrap">
     <div class="container">
         <div class="row g-4">
+            
             <div class="col-md-6">
                 <div class="form-card">
                     <h5>💬 Kirim Pesan</h5>
-                    <div class="mb-3">
-                        <label>Nama Lengkap</label>
-                        <input type="text" id="nama" class="form-control" placeholder="Nama kamu...">
-                    </div>
-                    <div class="mb-3">
-                        <label>Email</label>
-                        <input type="email" id="email" class="form-control" placeholder="email@kamu.com">
-                    </div>
-                    <div class="mb-3">
-                        <label>Pesan</label>
-                        <textarea id="pesan" class="form-control" rows="4" placeholder="Tulis pesanmu di sini..."></textarea>
-                    </div>
-                    <button class="btn-send" onclick="kirimPesan()">Kirim Pesan 🚀</button>
-                    <div class="success-msg" id="successMsg">✅ Pesan berhasil dikirim! Kami akan segera membalas.</div>
+                    <form action="{{ route('contact.store') }}" method="POST">
+                        @csrf
+                        <div class="mb-3">
+                            <label>Nama Lengkap</label>
+                            <input type="text" name="name" class="form-control" placeholder="Nama kamu..." required>
+                        </div>
+                        <div class="mb-3">
+                            <label>Email</label>
+                            <input type="email" name="email" class="form-control" placeholder="email@kamu.com" required>
+                        </div>
+                        <div class="mb-3">
+                            <label>Pesan</label>
+                            <textarea name="pesan" class="form-control" rows="4" placeholder="Tulis pesanmu di sini..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-send">Kirim Pesan 🚀</button>
+                    </form>
+
+                    @if(session('success'))
+                        <div class="success-msg mt-3 alert alert-success">✅ {{ session('success') }}</div>
+                    @endif
                 </div>
             </div>
+
             <div class="col-md-6">
                 <div class="info-card">
                     <div class="info-icon">🏫</div>
@@ -86,25 +98,13 @@
                 </div>
             </div>
         </div>
+
     </div>
 </div>
+
 <footer>
-    <p>©️ 2026 <span>MyWebsite</span>. All rights reserved. Kelompok 1 – Sistem Informasi</p>
+    <p>©️ 2026 <span>MyWebsite</span>. All rights reserved. Kelompok 5 – Sistem Informasi</p>
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-    function kirimPesan() {
-        const nama = document.getElementById('nama').value.trim();
-        const email = document.getElementById('email').value.trim();
-        const pesan = document.getElementById('pesan').value.trim();
-        if (!nama || !email || !pesan) { alert('Mohon isi semua field!'); return; }
-        document.getElementById('successMsg').style.display = 'block';
-        document.getElementById('nama').value = '';
-        document.getElementById('email').value = '';
-        document.getElementById('pesan').value = '';
-    }
-</script>
 </body>
 </html>
-
-</div>
